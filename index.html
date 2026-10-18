@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUMEN | Iluminación LED</title>
+  <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1>LUMEN-Iluminación LED</h1>
+    <p id="mensaje-promo"></p>
+  </header>
+
+  <main class="contenedor-principal">
+
+    <!--Formulario para agregar productos-->
+    <section class="seccion-bloque">
+    <h2>Agregar nuevo producto</h2>
+    <form id="formulario-producto">
+        <input type="text" id="input-nombre" placeholder="Nombre del producto" required>
+        <input type="number" id="input-precio" placeholder="Precio ($)" required min="1">
+        <input type="number" id="input-stock" placeholder="Stock inicial" required min="0">
+        <button type= "submit" id="btn-agregar">Agregar producto</button>
+    </form>
+    <p id="mensaje-feedback" class="feedback"></p>
+    </section>
+
+    <!--Buscador en tiempo real--> 
+    <section class="seccion-bloque">
+        <h2>Buscar en el catálogo</h2>
+        <input type="text" id="input-busqueda" placeholder=" Buscar prodducto...">
+        <div id="contenedor-productos"></div>
+    
+    </section>
+
+
+    <!--Contenedor donde se dibuja el catálogo-->
+    <section class="seccion-bloque">
+        <h2>Catálogo de productos</h2>
+        <div id="contenedor-productos" class="grid-productos"></div>
+    </section>
+    
+  
+  </main>
+   
+   <script src="js/main.js"></script>
+
+  
+</body>
+</html>
